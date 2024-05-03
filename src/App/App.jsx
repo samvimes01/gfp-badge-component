@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const sizes = ["xs", "sm", "lg"];
-  const types = ["primary", "error", "success", "warning", "brand"];
+  const types = ["primary", "error", "warning", "success", "brand"];
 
   return (
     <div className="grid grid-cols-3 gap-6">
