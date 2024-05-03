@@ -1,25 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import Badge from "../Badge/Badge.jsx";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const sizes = ["xs", "sm", "lg"];
+  const types = ["primary", "error", "success", "warning"];
 
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="grid grid-cols-3 gap-6">
+      {types.map((type) =>
+        sizes.map((size) => <Badge key={type + size} type={type} size={size} />)
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
