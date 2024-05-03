@@ -5,7 +5,7 @@ function Badge({ size = "xs", type = "primary", label = "Label" }) {
     let fontSize = size == "xs" ? "text-xs" : "text-sm";
     let color = "text-neutral-600";
     let bgColor = "bg-gray-50";
-    let borderColor = "border-gray-50";
+    let borderColor = "border-neutral-200";
     let py = "py-0.5";
     let px = "px-1.5";
     switch (type) {
